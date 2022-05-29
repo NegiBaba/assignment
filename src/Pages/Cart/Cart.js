@@ -156,7 +156,7 @@ const Cart = ({ items, addToCart, removeFromCart }) => {
 								className="add_more"
 								sx={{ mx: { xs: 1, sm: 1, md: 1, lg: 2 } }}
 							>
-								<Grid item xs={4} sm={4} md={4} lg={4} onClick={goToHome}>
+								<Grid item xs={12} sm={12} md={8} lg={4} onClick={goToHome}>
 									+ Add more items
 								</Grid>
 							</Grid>
