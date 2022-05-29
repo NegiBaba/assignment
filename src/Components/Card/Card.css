@@ -1,3 +1,25 @@
+@media (max-width: 600px) {
+	.card_container .content .discount {
+		font-size: 12px;
+	}
+
+	.card_container .content .name {
+		font-size: 13px;
+	}
+
+	.card_container .content .price_container .price {
+		font-size: 17px;
+	}
+
+	.card_container .content .price_container .price.old {
+		font-size: 12px;
+	}
+
+	.card_container .content .description {
+		font-size: 12px;
+	}
+}
+
 .card_container {
 	display: flex;
 	align-items: center;

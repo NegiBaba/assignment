@@ -1,3 +1,9 @@
+@media (max-width: 600px) {
+	.cart_container .heading {
+		font-size: 20px;
+	}
+}
+
 .page.cart_container {
 	padding: 70px 0;
 	margin-top: 50px;
@@ -139,6 +145,7 @@
 	padding: 30px 40px;
 	font-weight: 700;
 	color: var(--color_gray);
+	align-items: center;
 	justify-content: space-between;
 }
 
