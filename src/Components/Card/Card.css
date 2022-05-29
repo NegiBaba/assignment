@@ -1,0 +1,106 @@
+.card_container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.card_container .content {
+	max-width: 300px;
+}
+
+.card_container .content .image_container {
+	position: relative;
+}
+
+.card_container .content .image_container img {
+	width: 300px;
+	height: 190px;
+	margin-bottom: 10px;
+	-webkit-box-shadow: 0px 31px 28px -27px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 31px 28px -27px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 31px 28px -27px rgba(0, 0, 0, 0.5);
+}
+
+.card_container .content .discount {
+	top: 40px;
+	right: -5px;
+	width: 100px;
+	padding: 2px;
+	display: flex;
+	font-size: 12px;
+	font-weight: 600;
+	position: absolute;
+	justify-content: center;
+	color: var(--color_white);
+	border-radius: 50px 0 0 50px;
+	background-color: var(--color_gray);
+}
+
+.card_container .content .discount::after {
+	content: "";
+	right: -2px;
+	top: 27px;
+	z-index: -1;
+	width: 40px;
+	height: 10px;
+	opacity: 0.4;
+	position: absolute;
+	transform: rotateZ(-45deg);
+	background-color: var(--color_gray);
+}
+
+.card_container .content .details {
+	padding: 10px;
+}
+
+.card_container .content .np_container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.card_container .content .name {
+	font-size: 15px;
+	font-weight: 600;
+	color: var(--color_gray);
+	text-transform: capitalize;
+}
+
+.card_container .content .price_container {
+	display: flex;
+	align-items: baseline;
+}
+
+.card_container .content .price_container .price {
+	font-size: 19px;
+	font-weight: 600;
+}
+
+.card_container .content .price_container .price::before {
+	content: "$ ";
+}
+
+.card_container .content .price_container .price.old {
+	opacity: 0.6;
+	font-size: 14px;
+	position: relative;
+	margin-right: 10px;
+	color: var(--color_gray);
+}
+
+.card_container .content .price_container .price.old::after {
+	top: 50%;
+	left: -10%;
+	width: 120%;
+	content: "";
+	position: absolute;
+	transform: translateY(-50%);
+	border-top: 1px solid var(--color_black);
+}
+
+.card_container .content .description {
+	opacity: 0.3;
+	font-size: 13px;
+	margin-top: 10px;
+	max-width: 70%;
+}

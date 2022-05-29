@@ -1,15 +1,35 @@
+.page {
+	padding: 70px 0;
+	margin-top: 80px;
+}
+
 .heading {
 	font-size: 30px;
-	font-weight: 700;
+	font-weight: 600;
 	position: relative;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	color: var(--color_gray);
 }
 
+.seprator {
+	display: flex;
+	align-items: center;
+}
+
 .seprator::before {
-	height: 2px;
 	content: "";
-	width: 100px;
-	height: 4px;
+	padding: 1px;
+	min-width: 60px;
+	margin-right: 10px;
+	display: inline-block;
+	background-color: var(--color_separator);
+}
+
+.seprator::after {
+	content: "";
+	padding: 1px;
+	min-width: 60px;
+	margin-left: 10px;
+	display: inline-block;
 	background-color: var(--color_separator);
 }

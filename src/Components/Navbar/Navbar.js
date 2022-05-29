@@ -1,13 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { connect } from "react-redux";
+
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ items }) => {
+	let { pathname } = useLocation();
+
+	const getCount = () => {
+		return Object.keys(items).length;
+	};
+
 	return (
-		<div className="navbar_container">
+		<div
+			className={`navbar_container ${pathname === "/" ? "" : "navbar_shadow"}`}
+		>
 			<div className="brand">
 				<div className="logo">
 					<img
@@ -18,12 +28,14 @@ const Navbar = () => {
 				<div className="name">Happay</div>
 			</div>
 			<div className="navbar_actions">
-				<Link to="/cart" className="cart">
-					<ShoppingCartOutlinedIcon
-						sx={{ color: "var(--color_black)", fontSize: "26px" }}
-					/>
-					<span className="count">1</span>
-				</Link>
+				{pathname === "/" ? (
+					<Link to="/cart" className="cart">
+						<ShoppingCartOutlinedIcon
+							sx={{ color: "var(--color_black)", fontSize: "26px" }}
+						/>
+						<span className="count">{getCount()}</span>
+					</Link>
+				) : null}
 				<div className="avatar">
 					<AccountCircleOutlinedIcon
 						sx={{ color: "var(--color_black)", fontSize: "26px" }}
@@ -34,4 +46,8 @@ const Navbar = () => {
 	);
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+	items: state.cart.items,
+});
+
+export default connect(mapStateToProps)(Navbar);

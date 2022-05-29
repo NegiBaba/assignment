@@ -1,7 +1,9 @@
 :root {
 	--color_primary: #1d7cbf;
-	--color_parimary_bg: #1d7cbf10;
+	--color_primary_bg: #1d7cbf10;
+	--color_primary_dark: #0a6eb4;
 	--color_separator: #8cbbdd;
+	--color_bg: #edf2f5;
 
 	--color_orange: #ff5757;
 	--color_gray: #3c424e;
@@ -9,13 +11,87 @@
 	--color_black: #000000;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 body {
 	margin: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
+	font-family: "Poppins", sans-serif;
 }
 
-.page {
-	padding: 80px 0;
-	margin-top: 80px;
+.btn-primary {
+	display: flex;
+	padding: 10px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: 0.3s;
+	border-radius: 6px;
+	align-items: center;
+	justify-content: center;
+	color: var(--color_white);
+	border: 2px solid var(--color_primary);
+	background-color: var(--color_primary);
+}
+
+.btn-ghost {
+	display: flex;
+	padding: 10px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: 0.3s;
+	border-radius: 6px;
+	align-items: center;
+	justify-content: center;
+	color: var(--color_primary);
+	background-color: var(--color_white);
+	border: 2px solid var(--color_primary);
+}
+
+.btn-ghost:hover {
+	transition: 0.3s;
+	color: var(--color_white);
+	background-color: var(--color_primary);
+}
+
+.btn {
+	display: flex;
+	padding: 10px;
+	font-weight: 600;
+	position: relative;
+	border-radius: 6px;
+	align-items: center;
+	justify-content: center;
+	color: var(--color_primary);
+	background-color: var(--color_white);
+	border: 2px solid var(--color_primary);
+}
+
+.sub_btn-left {
+	left: 0;
+	cursor: pointer;
+	padding: 10px 15px;
+	font-weight: 600;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	color: var(--color_white);
+	background-color: var(--color_primary);
+}
+
+.sub_btn-right {
+	right: 0;
+	cursor: pointer;
+	padding: 10px 15px;
+	font-weight: 600;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	color: var(--color_white);
+	background-color: var(--color_primary);
+}
+
+.sub_btn-left:hover,
+.sub_btn-right:hover {
+	background-color: var(--color_primary_dark);
 }
